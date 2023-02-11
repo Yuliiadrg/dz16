@@ -1,0 +1,191 @@
+@use "variables";
+.main-header {
+  padding: 23px 0px;
+  border-bottom: 1px solid #EFEEF3;
+}
+
+.link-logo {
+  font: $logo-font;
+  color: $text-color;
+  vertical-align: middle;
+  padding: 0 20px;
+
+  &__icon {
+    fill: $accent-color
+  }
+}
+.servises-section {
+  padding: 100px 0px;
+}
+.main-title {
+  font: $title;
+  color: $title-color;
+  text-transform: capitalize;
+  margin-bottom: 15px;
+}
+.section-title {
+  font: $subtitle-section;
+  letter-spacing: 0.2px;
+  margin-bottom: 40px;
+}
+
+.exp-list-item {
+  padding: 40px;
+  border: 1px solid $border-color;
+  border-radius: 8px;
+  cursor: pointer;
+
+  &:hover {
+    border-color: $accent-color;
+  }
+
+  &:hover svg {
+    border-color: $accent-color;
+    filter: grayscale(61%) sepia(4%) brightness(107%) hue-rotate(307deg) saturate(143%) contrast(97%);
+  }
+
+  &__icon {
+    border: 1px solid rgba(21, 101, 216, 0.1);
+    border-radius: 16px;
+    width: 64px;
+    height: 64px;
+    padding: 14px;
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    font: $title-li;
+    letter-spacing: 0.2px;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    font: $text-font;
+    margin-bottom: 30px;
+  }
+
+  &__link {
+    display: block;
+    width: 90px;
+    font: $a-font;
+    color: $accent-color;
+    position: relative;
+    padding: 1em 1em;
+    outline: none;
+    border: 1px solid #1565D81A;
+    overflow: hidden;
+    transition: 0.2s;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  &__link:hover {
+    box-shadow: 0 0 10px $accent-color, 0 0 25px #3ce2b0, 0 0 50px $accent-color;
+    transition-delay: 0.6s;
+   }
+   
+   &__link span {
+    position: absolute;
+   }
+   
+   &__link:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, $accent-color);
+   }
+   
+   &__link:hover span:nth-child(1) {
+    left: 100%;
+    transition: 0.7s;
+   }
+   
+   &__linkn span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent,#3ce2b0);
+   }
+   
+   &__link:hover span:nth-child(3) {
+    right: 100%;
+    transition: 0.7s;
+    transition-delay: 0.35s;
+   }
+   
+   &__link span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, $accent-color);
+   }
+   
+   &__link:hover span:nth-child(2) {
+    top: 100%;
+    transition: 0.7s;
+    transition-delay: 0.17s;
+   }
+   
+   &__link span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #3ce2b0);
+   }
+   
+   &__link:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 0.7s;
+    transition-delay: 0.52s;
+   }
+   
+   &__link:active {
+    background: $accent-color;
+    background: linear-gradient(to top right, $accent-color, #3ce2b0);
+    color: $accent-color;
+    box-shadow: 0 0 8px $accent-color, 0 0 8px #3ce2b0, 0 0 8px $accent-color;
+    transition: 0.1s;
+   }
+   
+   &__link:active span:nth-child(1) 
+   span:nth-child(2) 
+   span:nth-child(2) 
+   span:nth-child(2) {
+    transition: none;
+    transition-delay: none;
+   }
+   
+}
+
+.main-footer {
+  padding: 40px 0px;
+  background-color: $second-bg-color;
+}
+
+.footer-link-logo {
+  color: $main-bg-color;
+  font: $logo-font;
+  transition: 0.3s all;
+}
+
+.footer-nav-list {
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+
+  &-item {
+    background: #EFEEF3;
+    border-radius: 5px;
+    padding: 9px;
+
+    &__link:hover {
+      fill: $accent-color;
+      transition: 0.5s all;
+    }
+  }
+}
